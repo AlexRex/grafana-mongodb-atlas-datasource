@@ -118,10 +118,10 @@ jobs:
 
       - name: Lint plugin
         run: |
-          git clone https://github.com/grafana/plugin-validator
-          pushd ./plugin-validator/pkg/cmd/plugincheck2
+          git clone https://github.com/grafana/plugin-validator.git
+          cd plugin-validator/pkg/cmd/plugincheck2
           go install
-          popd
+          cd -
           plugincheck2 -config ./plugin-validator/config/default.yaml ${{ steps.metadata.outputs.archive }}
 
       - name: Create release
