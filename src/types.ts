@@ -1,7 +1,5 @@
 import { DataQuery, DataSourceJsonData, SelectableValue } from '@grafana/data';
 
-import humanize from 'humanize-string';
-
 export const DIMENSIONS = {
   process_measurements: [
     'ASSERT_MSG',
@@ -166,21 +164,21 @@ export const DIMENSIONS = {
 export const HUMANITZED_DIMENSIONS: Record<string, Array<SelectableValue<string>>> = {
   disk_measurements: DIMENSIONS['disk_measurements'].map(dim => ({
     value: dim,
-    label: humanize(dim),
+    label: dim,
   })),
   database_measurements: DIMENSIONS['database_measurements'].map(dim => ({
     value: dim,
-    label: humanize(dim),
+    label: dim,
   })),
   process_measurements: DIMENSIONS['process_measurements'].map(dim => ({
     value: dim,
-    label: humanize(dim),
+    label: dim,
   })),
 };
 
 export const METRIC_TYPES = Object.keys(DIMENSIONS).map(metric => ({
   value: metric,
-  label: humanize(metric),
+  label: metric,
 }));
 
 export const DEFAULT_PROJECT = {

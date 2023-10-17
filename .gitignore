@@ -29,3 +29,5 @@ valiton-mongodbatlas-datasource/
 
 # Editor
 .idea
+
+local-datasources.yml

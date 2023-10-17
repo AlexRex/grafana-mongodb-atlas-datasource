@@ -13,14 +13,14 @@ This plugin allows to fetch [process](https://docs.atlas.mongodb.com/reference/a
 You can load the latest plugin version with the following command:
 
 ```bash
-grafana-cli --pluginUrl https://github.com/moppediert/grafana-mongodb-atlas-datasource/releases/download/v3.2.11/valiton-mongodbatlas-datasource.zip plugins install valiton-mongodbatlas-datasource
+grafana-cli --pluginUrl https://github.com/alexrex/grafana-mongodb-atlas-datasource/releases/latest/download/valiton-mongodbatlas-datasource.zip plugins install valiton-mongodbatlas-datasource
 ```
 
 For docker setup add the following environment variable to automatically install the plugin:
 
 ```bash
 docker run -p 3000:3000 \
-  -e GF_INSTALL_PLUGINS="https://github.com/valiton/grafana-mongodb-atlas-datasource/releases/download/v3.0.1/valiton-mongodbatlas-datasource.zip;valiton-mongodbatlas-datasource" \
+  -e GF_INSTALL_PLUGINS="https://github.com/alexrex/grafana-mongodb-atlas-datasource/releases/latest/download/valiton-mongodbatlas-datasource.zip;valiton-mongodbatlas-datasource" \
   -e "GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=valiton-mongodbatlas-datasource" \
   grafana/grafana:8.0.0
 ```
@@ -125,11 +125,11 @@ Pull requests for new features, bug fixes, and suggestions are welcome!
 yarn install
 npm run build
 mage -v
-rm -Rf valiton-mongodbatlas-datasource && \ 
+rm -Rf valiton-mongodbatlas-datasource && \
   cp -R dist valiton-mongodbatlas-datasource
 ```
 
-Next, please remove all dev-related topics from the `valiton-mongodbatlas-datasource/README.md` file. Otherwise, we can not publish it as Grafana plugin (only keep introduction & usage section). 
+Next, please remove all dev-related topics from the `valiton-mongodbatlas-datasource/README.md` file. Otherwise, we can not publish it as Grafana plugin (only keep introduction & usage section).
 
 Next, bundle it as
 
@@ -151,4 +151,4 @@ see https://help.github.com/en/articles/creating-releases for more information
 
 # Thanks to
 
-We also want to thank the Grafana team for their [Github Datasource](https://github.com/grafana/github-datasource) that helped us to get started and we also used some of their code parts. This decreased our development effort a lot, which made it easier for us to switch to the new Grafana Plugin v2 version! :-) 
+We also want to thank the Grafana team for their [Github Datasource](https://github.com/grafana/github-datasource) that helped us to get started and we also used some of their code parts. This decreased our development effort a lot, which made it easier for us to switch to the new Grafana Plugin v2 version! :-)

@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+  grafana:
+    container_name: 'valiton-mongodbatlas-datasource'
+    platform: "linux/amd64"
+    build:
+      context: ./.config
+      args:
+        grafana_image: ${GRAFANA_IMAGE:-grafana}
+        grafana_version: ${GRAFANA_VERSION:-9.3.6}
+    ports:
+      - 3000:3000/tcp
+    volumes:
+      - ./dist:/var/lib/grafana/plugins/valiton-mongodbatlas-datasource
+      - ./provisioning:/etc/grafana/provisioning

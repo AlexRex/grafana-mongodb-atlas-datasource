@@ -1,6 +1,6 @@
-import { DataSourceWithBackend } from '@grafana/runtime';
 import { DataSourceInstanceSettings } from '@grafana/data';
-import { DataSourceOptions, Query, Project, Cluster, Mongo } from './types';
+import { DataSourceWithBackend } from '@grafana/runtime';
+import { Cluster, DataSourceOptions, Mongo, Project, Query } from './types';
 
 export class DataSource extends DataSourceWithBackend<Query, DataSourceOptions> {
   constructor(instanceSettings: DataSourceInstanceSettings<DataSourceOptions>) {
